@@ -90,9 +90,9 @@
         <div class="flex flex-col md:flex-row justify-between items-center">
             <p class="text-gray-400 mb-4 md:mb-0">&copy; <?php echo date('Y'); ?> MASU. All rights reserved.</p>
             <div class="flex space-x-6">
-                <a href="/privacy-policy" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
-                <a href="/terms-of-service" class="text-gray-400 hover:text-white transition">Terms of Service</a>
-                <a href="/sitemap" class="text-gray-400 hover:text-white transition">Sitemap</a>
+                <a href="{{route('policy.show')}}" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                <a href="{{route('terms.show')}}" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white transition">Sitemap</a>
             </div>
         </div>
     </div>

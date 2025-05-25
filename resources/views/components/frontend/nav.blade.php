@@ -13,7 +13,7 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-6">
-            <a href="#home"
+            <a href="/"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Home</a>
             <a href="#clans"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Clans</a>
@@ -24,13 +24,13 @@
 
             <a href="/elites"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Elites</a>
-            <a href="/about"
+            <a href="{{route('about')}}"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">About</a>
             <a href="/join-us"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Join
                 Us</a>
 
-            <a href="#contact"
+            <a href="{{route('contact')}}"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Contact</a>
 
             <!-- Our Community Button -->
@@ -73,7 +73,7 @@
         <!-- Sidebar Content -->
         <div class="flex-1 overflow-y-auto p-6">
             <div class="space-y-4">
-                <a href="#home"
+                <a href="/"
                     class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
                     <i class="fas fa-home w-5"></i>
                     <span>Home</span>
@@ -103,7 +103,7 @@
                     <span>Elites</span>
                 </a>
 
-                <a href="/about"
+                <a href="{{route('about')}}"
                     class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
                     <i class="fas fa-info-circle w-5"></i>
                     <span>About</span>
@@ -115,7 +115,7 @@
                     <span>Join Us</span>
                 </a>
 
-                <a href="#contact"
+                <a href="{{route('contact')}}"
                     class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
                     <i class="fas fa-envelope w-5"></i>
                     <span>Contact</span>
@@ -135,15 +135,6 @@
 </div>
 
 <script>
-    // Dynamic page titles based on current page/section
-    const pageTitles = {
-        '#home': 'MASU - Home',
-        '#clans': 'MASU - Clans',
-        '#history': 'MASU - History',
-        '#tourism': 'MASU - Tourism',
-        '#contact': 'MASU - Contact',
-        'default': 'MASU'
-    };
 
     // Navbar background transition on scroll
     const navbar = document.getElementById('navbar');

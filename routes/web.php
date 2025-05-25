@@ -1,10 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FrontendController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('contact-us', [FrontendController::class, 'contact'])->name('contact');
+Route::get('about-us', [FrontendController::class, 'about'])->name('about');
 
 Route::middleware([
     'auth:sanctum',

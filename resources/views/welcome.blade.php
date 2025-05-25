@@ -1,86 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nwa Sub-Division Clans</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .clan-card {
-            transition: all 0.3s ease;
-        }
-        .clan-card:hover {
-            transform: translateY(-5px);
-        }
-        .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.pixabay.com/photo/2025/05/04/11/13/california-9577976_1280.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        .navbar-fixed {
-            backdrop-filter: blur(8px);
-            background-color: rgba(15, 23, 42, 0.8);
-        }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="#" class="flex items-center space-x-2">
-                <div class="bg-amber-500 text-white p-2 rounded-lg">
-                    <i class="fas fa-mountain text-xl"></i>
-                </div>
-                <span class="text-xl font-bold text-white">Nwa Heritage</span>
-            </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-white hover:text-amber-400 transition">Home</a>
-                <a href="#clans" class="text-white hover:text-amber-400 transition">Clans</a>
-                <a href="#history" class="text-white hover:text-amber-400 transition">History</a>
-                <a href="#tourism" class="text-white hover:text-amber-400 transition">Tourism</a>
-                <a href="#contact" class="text-white hover:text-amber-400 transition">Contact</a>
-            </div>
-            
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-white">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 text-white">
-            <div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
-                <a href="#home" class="hover:text-amber-400 transition">Home</a>
-                <a href="#clans" class="hover:text-amber-400 transition">Clans</a>
-                <a href="#history" class="hover:text-amber-400 transition">History</a>
-                <a href="#tourism" class="hover:text-amber-400 transition">Tourism</a>
-                <a href="#contact" class="hover:text-amber-400 transition">Contact</a>
-            </div>
-        </div>
-    </nav>
+<x-guest-layout>
+
 
     <!-- Hero Section -->
     <section id="home" class="hero-section min-h-screen flex items-center">
         <div class="container mx-auto px-4 text-center py-20">
-            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Discover the Rich Heritage of <span class="text-amber-400">Nwa Sub-Division</span></h1>
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">Discover the Rich Heritage of <span class="text-green-400">Nwa Sub-Division</span></h1>
             <p class="text-xl text-gray-200 mb-10 max-w-3xl mx-auto">Explore the cultural wealth, history, and traditions of Yamba, Mbaw, and Mfumte clans in Cameroon.</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#clans" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg transition font-medium"><i class="fas fa-compass mr-2"></i> Explore Clans</a>
-                <a href="#tourism" class="bg-transparent border-2 border-white hover:border-amber-400 hover:text-amber-400 text-white px-8 py-3 rounded-lg transition font-medium"><i class="fas fa-map-marker-alt mr-2"></i> Discover Sites</a>
+                <a href="#clans" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg transition font-medium"><i class="fas fa-compass mr-2"></i> Explore Clans</a>
+                <a href="#tourism" class="bg-transparent border-2 border-white hover:border-green-400 hover:text-green-400 text-white px-8 py-3 rounded-lg transition font-medium"><i class="fas fa-map-marker-alt mr-2"></i> Discover Sites</a>
             </div>
         </div>
     </section>
@@ -89,7 +17,7 @@
     <section id="clans" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-amber-500 font-medium">Our Heritage</span>
+                <span class="text-green-500 font-medium">Our Heritage</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">The Three Clans of Nwa</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">The Nwa Sub-Division is home to three distinct clans, each with their unique culture, governance, and contributions to the region.</p>
             </div>
@@ -97,11 +25,11 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Yamba Clan -->
 <div class="clan-card bg-white rounded-xl shadow-lg overflow-hidden">
-    <div class="h-48 bg-amber-100 relative">
+    <div class="h-48 bg-green-100 relative">
         <div class="absolute inset-0">
             <img src="https://cdn.pixabay.com/photo/2017/01/19/23/46/panorama-1993645_1280.jpg" alt="Yamba Landscape" class="h-full w-full object-cover">
         </div>
-        <div class="absolute top-4 right-4 bg-amber-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
             15 Villages
         </div>
     </div>
@@ -109,11 +37,11 @@
         <h3 class="text-2xl font-bold text-gray-800 mb-2">Yamba Clan</h3>
         <p class="text-gray-600 mb-4">The administrative center of the sub-division with rich cultural heritage and potential for development.</p>
         <div class="flex flex-wrap gap-2 mb-6">
-            <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm">Administrative Hub</span>
-            <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm">Healthcare</span>
-            <span class="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm">Tourism</span>
+            <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Administrative Hub</span>
+            <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Healthcare</span>
+            <span class="bg-green-50 text-green-700 px-3 py-1 rounded-full text-sm">Tourism</span>
         </div>
-        <a href="#" class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+        <a href="#" class="text-green-500 hover:text-green-600 font-medium flex items-center">
             Learn more <i class="fas fa-arrow-right ml-2"></i>
         </a>
     </div>
@@ -175,7 +103,7 @@
     <section id="history" class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-amber-500 font-medium">Our Roots</span>
+                <span class="text-green-500 font-medium">Our Roots</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Rich Historical Background</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Explore the origins, migrations, and historical developments that shaped the Nwa Sub-Division.</p>
             </div>
@@ -184,8 +112,8 @@
                 <div>
                     <div class="bg-white p-6 rounded-xl shadow-md mb-6">
                         <div class="flex items-center mb-4">
-                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
-                                <i class="fas fa-scroll text-amber-500 text-xl"></i>
+                            <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-scroll text-green-500 text-xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">Origins & Migration</h3>
                         </div>
@@ -194,8 +122,8 @@
                     
                     <div class="bg-white p-6 rounded-xl shadow-md mb-6">
                         <div class="flex items-center mb-4">
-                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
-                                <i class="fas fa-users text-amber-500 text-xl"></i>
+                            <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-users text-green-500 text-xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">Traditional Governance</h3>
                         </div>
@@ -204,8 +132,8 @@
                     
                     <div class="bg-white p-6 rounded-xl shadow-md">
                         <div class="flex items-center mb-4">
-                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
-                                <i class="fas fa-balance-scale text-amber-500 text-xl"></i>
+                            <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-balance-scale text-green-500 text-xl"></i>
                             </div>
                             <h3 class="text-xl font-bold">Modern Challenges</h3>
                         </div>
@@ -219,7 +147,7 @@
                         <div class="space-y-6">
                             <div class="flex">
                                 <div class="flex flex-col items-center mr-4">
-                                    <div class="bg-amber-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">1</div>
+                                    <div class="bg-green-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">1</div>
                                     <div class="h-full w-0.5 bg-gray-200 mt-2"></div>
                                 </div>
                                 <div>
@@ -230,7 +158,7 @@
                             
                             <div class="flex">
                                 <div class="flex flex-col items-center mr-4">
-                                    <div class="bg-amber-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">2</div>
+                                    <div class="bg-green-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">2</div>
                                     <div class="h-full w-0.5 bg-gray-200 mt-2"></div>
                                 </div>
                                 <div>
@@ -241,7 +169,7 @@
                             
                             <div class="flex">
                                 <div class="flex flex-col items-center mr-4">
-                                    <div class="bg-amber-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">3</div>
+                                    <div class="bg-green-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">3</div>
                                     <div class="h-full w-0.5 bg-gray-200 mt-2"></div>
                                 </div>
                                 <div>
@@ -252,7 +180,7 @@
                             
                             <div class="flex">
                                 <div class="flex flex-col items-center mr-4">
-                                    <div class="bg-amber-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">4</div>
+                                    <div class="bg-green-500 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold">4</div>
                                 </div>
                                 <div>
                                     <h4 class="font-bold">Modern Era</h4>
@@ -262,7 +190,7 @@
                         </div>
                     </div>
                     
-                    <div class="absolute -top-14 -right-4 bg-amber-500 text-white p-4 rounded-xl shadow-lg hidden md:block">
+                    <div class="absolute -top-14 -right-4 bg-green-500 text-white p-4 rounded-xl shadow-lg hidden md:block">
                         <p class="font-bold">Did you know?</p>
                         <p class="text-sm">The caves in the Mfumte clan were historically used during raids for protection.</p>
                     </div>
@@ -275,7 +203,7 @@
     <section id="tourism" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-amber-500 font-medium">Explore</span>
+                <span class="text-green-500 font-medium">Explore</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Tourist Attractions</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Discover the natural beauty and cultural landmarks across the Nwa Sub-Division's three clans.</p>
             </div>
@@ -291,10 +219,10 @@
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl font-bold">Kopdze Cave</h3>
-                            <span class="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">Yamba</span>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Yamba</span>
                         </div>
                         <p class="text-gray-600 mb-4">A historic cave located in Nwa with significant cultural importance to the Yamba people.</p>
-                        <a href="/tourism/kopdze-cave" class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                        <a href="/tourism/kopdze-cave" class="text-green-500 hover:text-green-600 font-medium flex items-center">
                             View details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -310,10 +238,10 @@
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl font-bold">Mapong Dam</h3>
-                            <span class="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">Yamba</span>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Yamba</span>
                         </div>
                         <p class="text-gray-600 mb-4">A picturesque dam in Nwa offering scenic views and recreational opportunities.</p>
-                        <a href="/tourism/mapong-dam" class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                        <a href="/tourism/mapong-dam" class="text-green-500 hover:text-green-600 font-medium flex items-center">
                             View details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -329,10 +257,10 @@
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl font-bold">Majang Hill</h3>
-                            <span class="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">Yamba</span>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Yamba</span>
                         </div>
                         <p class="text-gray-600 mb-4">An impressive hill in Mbem providing breathtaking views of the surrounding landscape.</p>
-                        <a href="/tourism/majang-hill" class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                        <a href="/tourism/majang-hill" class="text-green-500 hover:text-green-600 font-medium flex items-center">
                             View details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -348,10 +276,10 @@
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl font-bold">Nzebuck Dam</h3>
-                            <span class="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">Yamba</span>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Yamba</span>
                         </div>
                         <p class="text-gray-600 mb-4">A beautiful dam in Mbem that serves both practical and aesthetic purposes for the community.</p>
-                        <a href="/tourism/nzebuck-dam" class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                        <a href="/tourism/nzebuck-dam" class="text-green-500 hover:text-green-600 font-medium flex items-center">
                             View details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -370,7 +298,7 @@
                             <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">All Clans</span>
                         </div>
                         <p class="text-gray-600 mb-4">Visit the traditional palaces of the Fons that showcase the cultural heritage of the clans.</p>
-                        <a href="/tourism/palaces" class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                        <a href="/tourism/palaces" class="text-green-500 hover:text-green-600 font-medium flex items-center">
                             View details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -386,10 +314,10 @@
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-2">
                             <h3 class="text-xl font-bold">Rom Rock</h3>
-                            <span class="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">Yamba</span>
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Yamba</span>
                         </div>
                         <p class="text-gray-600 mb-4">A natural rock formation with cultural significance to the people of Rom village.</p>
-                        <a href="/tourism/rom-rock" class="text-amber-500 hover:text-amber-600 font-medium flex items-center">
+                        <a href="/tourism/rom-rock" class="text-green-500 hover:text-green-600 font-medium flex items-center">
                             View details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -397,7 +325,7 @@
             </div>
             
             <div class="mt-12 text-center">
-                <a href="/tourism" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg transition font-medium inline-flex items-center">
+                <a href="/tourism" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg transition font-medium inline-flex items-center">
                     <i class="fas fa-map-marked-alt mr-2"></i> View All Attractions
                 </a>
             </div>
@@ -408,7 +336,7 @@
     <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-amber-500 font-medium">Geography</span>
+                <span class="text-green-500 font-medium">Geography</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Villages Map</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Explore the geographical distribution of villages across the three clans of Nwa Sub-Division.</p>
             </div>
@@ -425,7 +353,7 @@
                 <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Yamba Villages -->
                     <div>
-                        <h3 class="text-xl font-bold text-amber-500 mb-4 flex items-center">
+                        <h3 class="text-xl font-bold text-green-500 mb-4 flex items-center">
                             <i class="fas fa-circle text-xs mr-2"></i> Yamba Villages (15)
                         </h3>
                         <ul class="space-y-2 text-gray-600">
@@ -500,7 +428,7 @@
     <section id="contact" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-amber-500 font-medium">Get in Touch</span>
+                <span class="text-green-500 font-medium">Get in Touch</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Contact Us</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Have questions about visiting Nwa Sub-Division? Want to learn more about our heritage and culture? Reach out to us!</p>
             </div>
@@ -513,25 +441,25 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                             <div>
                                 <label class="block text-gray-700 font-medium mb-2" for="name">Full Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition" placeholder="Your name">
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50 transition" placeholder="Your name">
                             </div>
                             <div>
                                 <label class="block text-gray-700 font-medium mb-2" for="email">Email Address</label>
-                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition" placeholder="Your email">
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50 transition" placeholder="Your email">
                             </div>
                         </div>
                         
                         <div class="mb-6">
                             <label class="block text-gray-700 font-medium mb-2" for="subject">Subject</label>
-                            <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition" placeholder="Message subject">
+                            <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50 transition" placeholder="Message subject">
                         </div>
                         
                         <div class="mb-6">
                             <label class="block text-gray-700 font-medium mb-2" for="message">Message</label>
-                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-amber-500 focus:ring focus:ring-amber-200 focus:ring-opacity-50 transition" placeholder="Your message"></textarea>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50 transition" placeholder="Your message"></textarea>
                         </div>
                         
-                        <button type="submit" class="bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-lg transition font-medium">
+                        <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg transition font-medium">
                             <i class="fas fa-paper-plane mr-2"></i> Send Message
                         </button>
                     </form>
@@ -542,8 +470,8 @@
                     <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
                     <div class="space-y-6">
                         <div class="flex items-start">
-                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
-                                <i class="fas fa-map-marker-alt text-amber-500"></i>
+                            <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-green-500"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">Address</h4>
@@ -552,8 +480,8 @@
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
-                                <i class="fas fa-phone text-amber-500"></i>
+                            <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone text-green-500"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">Phone</h4>
@@ -563,8 +491,8 @@
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
-                                <i class="fas fa-envelope text-amber-500"></i>
+                            <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-green-500"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">Email</h4>
@@ -574,8 +502,8 @@
                         </div>
                         
                         <div class="flex items-start">
-                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
-                                <i class="fas fa-clock text-amber-500"></i>
+                            <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-clock text-green-500"></i>
                             </div>
                             <div>
                                 <h4 class="font-bold">Office Hours</h4>
@@ -589,16 +517,16 @@
                     <div class="mt-8">
                         <h4 class="font-bold mb-4">Follow Us</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-500 p-3 rounded-lg transition">
+                            <a href="#" class="bg-green-100 hover:bg-green-200 text-green-500 p-3 rounded-lg transition">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
-                            <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-500 p-3 rounded-lg transition">
+                            <a href="#" class="bg-green-100 hover:bg-green-200 text-green-500 p-3 rounded-lg transition">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-500 p-3 rounded-lg transition">
+                            <a href="#" class="bg-green-100 hover:bg-green-200 text-green-500 p-3 rounded-lg transition">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="bg-amber-100 hover:bg-amber-200 text-amber-500 p-3 rounded-lg transition">
+                            <a href="#" class="bg-green-100 hover:bg-green-200 text-green-500 p-3 rounded-lg transition">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -609,12 +537,12 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="py-16 bg-amber-500">
+    <section class="py-16 bg-green-500">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="mb-6 md:mb-0">
                     <h3 class="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>
-                    <p class="text-amber-100">Stay updated with the latest news and events from Nwa Sub-Division.</p>
+                    <p class="text-green-100">Stay updated with the latest news and events from Nwa Sub-Division.</p>
                 </div>
                 <div class="w-full md:w-auto">
                     <form class="flex">
@@ -627,132 +555,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- About -->
-                <div>
-                    <a href="#" class="flex items-center space-x-2 mb-6">
-                        <div class="bg-amber-500 text-white p-2 rounded-lg">
-                            <i class="fas fa-mountain text-xl"></i>
-                        </div>
-                        <span class="text-xl font-bold text-white">Nwa Heritage</span>
-                    </a>
-                    <p class="text-gray-400 mb-6">Preserving and promoting the rich cultural heritage of Yamba, Mbaw, and Mfumte clans in Nwa Sub-Division, Cameroon.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Quick Links</h4>
-                    <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="#clans" class="text-gray-400 hover:text-white transition">Clans</a></li>
-                        <li><a href="#history" class="text-gray-400 hover:text-white transition">History</a></li>
-                        <li><a href="#tourism" class="text-gray-400 hover:text-white transition">Tourism</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Clan Links -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Clan Pages</h4>
-                    <ul class="space-y-3">
-                        <li><a href="/clans/yamba" class="text-gray-400 hover:text-white transition">Yamba Clan</a></li>
-                        <li><a href="/clans/mbaw" class="text-gray-400 hover:text-white transition">Mbaw Clan</a></li>
-                        <li><a href="/clans/mfumte" class="text-gray-400 hover:text-white transition">Mfumte Clan</a></li>
-                        <li><a href="/festivals" class="text-gray-400 hover:text-white transition">Cultural Festivals</a></li>
-                        <li><a href="/governance" class="text-gray-400 hover:text-white transition">Traditional Governance</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1.5 mr-3 text-amber-500"></i>
-                            <span class="text-gray-400">Nwa Sub-Division, Donga-Mantung Division, North West Region, Cameroon</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-3 text-amber-500"></i>
-                            <span class="text-gray-400">+237 XXX XXX XXX</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-3 text-amber-500"></i>
-                            <span class="text-gray-400">info@nwaheritage.com</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <hr class="border-gray-800 my-8">
-            
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">&copy; 2025 Nwa Heritage. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="/privacy-policy" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
-                    <a href="/terms-of-service" class="text-gray-400 hover:text-white transition">Terms of Service</a>
-                    <a href="/sitemap" class="text-gray-400 hover:text-white transition">Sitemap</a>
-                </div>
-            </div>
-        </div>
-    </footer>
     
-    <script>
-        // Navbar color change on scroll
-        const navbar = document.getElementById('navbar');
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-fixed');
-            } else {
-                navbar.classList.remove('navbar-fixed');
-            }
-        });
-        
-        // Mobile menu toggle
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    // Close mobile menu if open
-                    mobileMenu.classList.add('hidden');
-                    
-                    // Scroll to target
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+
+
+</x-guest-layout>

@@ -26,11 +26,6 @@
         .clan-card:hover {
             transform: translateY(-5px);
         }
-        .hero-section {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cdn.pixabay.com/photo/2025/05/04/11/13/california-9577976_1280.jpg');
-            background-size: cover;
-            background-position: center;
-        }
         .navbar-fixed {
             backdrop-filter: blur(8px);
             background-color: rgba(15, 23, 42, 0.8);

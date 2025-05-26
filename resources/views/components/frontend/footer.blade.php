@@ -43,7 +43,7 @@
                         <li><a href="#clans" class="text-gray-400 hover:text-white transition">Clans</a></li>
                         <li><a href="#history" class="text-gray-400 hover:text-white transition">Our Team</a></li>
                         <li><a href="#tourism" class="text-gray-400 hover:text-white transition">Events</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Education</a></li>
+                        <li><a href="{{route('education')}}" class="text-gray-400 hover:text-white transition">Education</a></li>
                     </ul>
                 </div>
 

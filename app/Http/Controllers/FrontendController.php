@@ -16,4 +16,8 @@ class FrontendController extends Controller
     {
         return view('about');
     }
+        public function education()
+    {
+        return view('education');
+    }
 }

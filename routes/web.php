@@ -10,6 +10,7 @@ Route::get('/', function () {
 
 Route::get('contact-us', [FrontendController::class, 'contact'])->name('contact');
 Route::get('about-us', [FrontendController::class, 'about'])->name('about');
+Route::get('education', [FrontendController::class, 'education'])->name('education');
 
 Route::middleware([
     'auth:sanctum',

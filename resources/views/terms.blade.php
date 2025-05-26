@@ -5,4 +5,6 @@
     background="/images/terms.jpg" 
 />
 
+
+<x-frontend.newsletter/>
 </x-guest-layout>

@@ -6,4 +6,6 @@
 />
 
 
+
+<x-frontend.newsletter/>
 </x-guest-layout>

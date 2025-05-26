@@ -39,10 +39,10 @@
                 <div class="min-w-[150px]">
                     <h4 class="text-xl font-bold mb-6">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                        <li><a href="{{route('projects')}}" class="text-gray-400 hover:text-white transition">Projects</a></li>
                         <li><a href="#clans" class="text-gray-400 hover:text-white transition">Clans</a></li>
-                        <li><a href="#history" class="text-gray-400 hover:text-white transition">Our Team</a></li>
-                        <li><a href="#tourism" class="text-gray-400 hover:text-white transition">Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Our Team</a></li>
+                        <li><a href="{{route('events')}}" class="text-gray-400 hover:text-white transition">Events</a></li>
                         <li><a href="{{route('education')}}" class="text-gray-400 hover:text-white transition">Education</a></li>
                     </ul>
                 </div>

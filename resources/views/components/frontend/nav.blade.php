@@ -17,7 +17,7 @@
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Home</a>
             <a href="#clans"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Clans</a>
-            <a href="#history"
+            <a href="{{route('history')}}"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">History</a>
             <a href="#tourism"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Tourism</a>
@@ -85,7 +85,7 @@
                     <span>Clans</span>
                 </a>
 
-                <a href="#history"
+                <a href="{{route('history')}}"
                     class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
                     <i class="fas fa-book w-5"></i>
                     <span>History</span>

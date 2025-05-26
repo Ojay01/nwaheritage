@@ -24,4 +24,16 @@ class FrontendController extends Controller
     {
         return view('join-us');
     }
+        public function events()
+    {
+        return view('events');
+    }
+        public function projects()
+    {
+        return view('projects');
+    }
+        public function history()
+    {
+        return view('history');
+    }
 }

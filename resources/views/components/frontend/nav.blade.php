@@ -26,7 +26,7 @@
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Elites</a>
             <a href="{{route('about')}}"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">About</a>
-            <a href="/join-us"
+            <a href="{{route('joinUs')}}"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Join
                 Us</a>
 
@@ -109,7 +109,7 @@
                     <span>About</span>
                 </a>
 
-                <a href="/join-us"
+                <a href="{{route('joinUs')}}"
                     class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
                     <i class="fas fa-user-plus w-5"></i>
                     <span>Join Us</span>
@@ -196,9 +196,6 @@
 
                 // Update URL hash
                 history.pushState(null, null, targetId);
-
-
-
                 // Scroll to target
                 window.scrollTo({
                     top: targetElement.offsetTop - 80,

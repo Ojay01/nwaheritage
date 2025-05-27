@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-frontend.banner 
         title="Join MaSu Today" 
-        description="Become a member of the Menchum Association of Students Union and connect with your heritage, culture, and fellow students." 
+        description="Become a member of the Mantung students union and connect with your heritage, culture, and fellow students." 
         background="/images/joinus.jpg" 
     />
 
@@ -24,7 +24,7 @@
                     Join Our <span class="text-green-600">Community</span>
                 </h2>
                 <p class="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
-                    Fill out the form below to become a proud member of MaSu. Connect with your roots, 
+                    Fill out the form below to become a proud member of MASU. Connect with your roots, 
                     build lasting relationships, and contribute to our vibrant community.
                 </p>
             </div>
@@ -55,8 +55,7 @@
                             <!-- Email -->
                             <div>
                                 <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-                                    Email Address <span class="text-red-500">*</span>
-                                </label>
+                                    Email Address <span class="text-red-500">*</span>                                </label>
                                 <input type="email" id="email" name="email" required
                                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300"
                                        placeholder="your.email@example.com">
@@ -164,10 +163,17 @@
                                 <label for="photo" class="block text-sm font-semibold text-gray-700 mb-2">
                                     Profile Photo <span class="text-red-500">*</span>
                                 </label>
-                                <div class="relative">
+                                <div class="relative border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-green-500 transition-all duration-300"
+                                     id="photoDropZone">
                                     <input type="file" id="photo" name="photo" accept="image/*" required
-                                           class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300">
-                                    <p class="text-xs text-gray-500 mt-1">Upload a clear photo of yourself (JPG, PNG, max 5MB)</p>
+                                           class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                                    <p class="text-gray-500">Drag and drop your profile photo here or click to select (JPG, PNG, max 5MB)</p>
+                                    <div id="photoPreview" class="mt-4 hidden">
+                                        <img src="" alt="Profile Photo Preview" class="max-w-full h-auto rounded-lg shadow-md">
+                                        <button type="button" class="mt-2 text-red-500 hover:text-red-700 font-semibold" onclick="clearFile('photo', 'photoPreview')">
+                                            Remove
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -176,10 +182,17 @@
                                 <label for="idCardFront" class="block text-sm font-semibold text-gray-700 mb-2">
                                     ID Card (Front) <span class="text-red-500">*</span>
                                 </label>
-                                <div class="relative">
+                                <div class="relative border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-green-500 transition-all duration-300"
+                                     id="idCardFrontDropZone">
                                     <input type="file" id="idCardFront" name="id_card_front" accept="image/*" required
-                                           class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300">
-                                    <p class="text-xs text-gray-500 mt-1">Front side of your ID card</p>
+                                           class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                                    <p class="text-gray-500">Drag and drop ID card front here or click to select (JPG, PNG, max 5MB)</p>
+                                    <div id="idCardFrontPreview" class="mt-4 hidden">
+                                        <img src="" alt="ID Card Front Preview" class="max-w-full h-auto rounded-lg shadow-md">
+                                        <button type="button" class="mt-2 text-red-500 hover:text-red-700 font-semibold" onclick="clearFile('idCardFront', 'idCardFrontPreview')">
+                                            Remove
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -188,10 +201,17 @@
                                 <label for="idCardBack" class="block text-sm font-semibold text-gray-700 mb-2">
                                     ID Card (Back) <span class="text-red-500">*</span>
                                 </label>
-                                <div class="relative">
+                                <div class="relative border-2 border-dashed border-gray-300 rounded-xl p-6 text-center hover:border-green-500 transition-all duration-300"
+                                     id="idCardBackDropZone">
                                     <input type="file" id="idCardBack" name="id_card_back" accept="image/*" required
-                                           class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all duration-300">
-                                    <p class="text-xs text-gray-500 mt-1">Back side of your ID card</p>
+                                           class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                                    <p class="text-gray-500">Drag and drop ID card back here or click to select (JPG, PNG, max 5MB)</p>
+                                    <div id="idCardBackPreview" class="mt-4 hidden">
+                                        <img src="" alt="ID Card Back Preview" class="max-w-full h-auto rounded-lg shadow-md">
+                                        <button type="button" class="mt-2 text-red-500 hover:text-red-700 font-semibold" onclick="clearFile('idCardBack', 'idCardBackPreview')">
+                                            Remove
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +262,25 @@
         </div>
     </section>
 
+    <!-- Cropping Modal -->
+    <div id="cropModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-xl p-6 w-full max-w-2xl">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Crop Your Image</h3>
+            <div id="cropContainer" class="mb-4">
+                <img id="cropImage" src="" alt="Image to crop" class="max-w-full h-auto">
+            </div>
+            <div class="flex justify-end space-x-4">
+                <button id="skipCropBtn" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-xl hover:bg-gray-300">Skip Cropping</button>
+                <button id="cropBtn" class="px-4 py-2 bg-green-600 text-white rounded-xl hover:bg-green-700">Crop & Save</button>
+            </div>
+        </div>
+    </div>
+
     <x-frontend.newsletter />
+
+    <!-- Cropper.js CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/cropperjs@1.5.12/dist/cropper.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/cropperjs@1.5.12/dist/cropper.min.js"></script>
 
     <!-- Vanilla JavaScript for Form Functionality -->
     <script>
@@ -268,6 +306,14 @@
             const villageSelect = document.getElementById('village');
             const form = document.getElementById('membershipForm');
             const submitBtn = document.getElementById('submitBtn');
+            const cropModal = document.getElementById('cropModal');
+            const cropImage = document.getElementById('cropImage');
+            const cropBtn = document.getElementById('cropBtn');
+            const skipCropBtn = document.getElementById('skipCropBtn');
+            let cropper = null;
+            let currentInputId = null;
+            let currentPreviewId = null;
+            let originalFile = null;
 
             // Handle clan selection change
             clanSelect.addEventListener('change', function() {
@@ -291,27 +337,130 @@
             });
 
             // File upload validation
-            function validateFileSize(input, maxSizeMB = 5) {
-                const file = input.files[0];
+            function validateFileSize(file, maxSizeMB = 5) {
                 if (file && file.size > maxSizeMB * 1024 * 1024) {
                     alert(`File size must be less than ${maxSizeMB}MB`);
-                    input.value = '';
                     return false;
                 }
                 return true;
             }
 
-            // Add file size validation to file inputs
-            document.getElementById('photo').addEventListener('change', function() {
-                validateFileSize(this, 5);
+            // Show crop modal
+            function showCropModal(file, inputId, previewId) {
+                if (!validateFileSize(file)) {
+                    document.getElementById(inputId).value = '';
+                    return;
+                }
+                originalFile = file;
+                currentInputId = inputId;
+                currentPreviewId = previewId;
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    cropImage.src = e.target.result;
+                    cropModal.classList.remove('hidden');
+                    if (cropper) {
+                        cropper.destroy();
+                    }
+                    cropper = new Cropper(cropImage, {
+                        aspectRatio: inputId === 'photo' ? 1 : NaN, // Square for profile photo, freeform for ID cards
+                        viewMode: 1,
+                        autoCropArea: 0.8,
+                        responsive: true
+                    });
+                };
+                reader.readAsDataURL(file);
+            }
+
+            // Update preview and file input
+            function updatePreviewAndFile(inputId, previewId, file) {
+                const previewContainer = document.getElementById(previewId);
+                const previewImg = previewContainer.querySelector('img');
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    previewImg.src = e.target.result;
+                    previewContainer.classList.remove('hidden');
+                };
+                reader.readAsDataURL(file);
+
+                // Update file input with new file
+                const input = document.getElementById(inputId);
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                input.files = dataTransfer.files;
+            }
+
+            // Clear file and preview
+            function clearFile(inputId, previewId) {
+                const input = document.getElementById(inputId);
+                const previewContainer = document.getElementById(previewId);
+                input.value = '';
+                previewContainer.classList.add('hidden');
+                if (cropModal.classList.contains('hidden')) return;
+                cropModal.classList.add('hidden');
+                if (cropper) {
+                    cropper.destroy();
+                    cropper = null;
+                }
+            }
+
+            // Setup drag-and-drop and cropping for each file input
+            const fileInputs = [
+                { inputId: 'photo', dropZoneId: 'photoDropZone', previewId: 'photoPreview' },
+                { inputId: 'idCardFront', dropZoneId: 'idCardFrontDropZone', previewId: 'idCardFrontPreview' },
+                { inputId: 'idCardBack', dropZoneId: 'idCardBackDropZone', previewId: 'idCardBackPreview' }
+            ];
+
+            fileInputs.forEach(({ inputId, dropZoneId, previewId }) => {
+                const input = document.getElementById(inputId);
+                const dropZone = document.getElementById(dropZoneId);
+
+                // Handle file input change
+                input.addEventListener('change', function() {
+                    if (this.files[0]) {
+                        showCropModal(this.files[0], inputId, previewId);
+                    }
+                });
+
+                // Drag and drop events
+                dropZone.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    dropZone.classList.add('border-green-500');
+                });
+
+                dropZone.addEventListener('dragleave', function() {
+                    dropZone.classList.remove('border-green-500');
+                });
+
+                dropZone.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    dropZone.classList.remove('border-green-500');
+                    if (e.dataTransfer.files[0]) {
+                        showCropModal(e.dataTransfer.files[0], inputId, previewId);
+                    }
+                });
             });
 
-            document.getElementById('idCardFront').addEventListener('change', function() {
-                validateFileSize(this, 5);
+            // Crop button handler
+            cropBtn.addEventListener('click', function() {
+                if (cropper) {
+                    cropper.getCroppedCanvas({ maxWidth: 1024, maxHeight: 1024 }).toBlob(function(blob) {
+                        const file = new File([blob], originalFile.name, { type: originalFile.type });
+                        updatePreviewAndFile(currentInputId, currentPreviewId, file);
+                        cropModal.classList.add('hidden');
+                        cropper.destroy();
+                        cropper = null;
+                    }, originalFile.type);
+                }
             });
 
-            document.getElementById('idCardBack').addEventListener('change', function() {
-                validateFileSize(this, 5);
+            // Skip cropping button handler
+            skipCropBtn.addEventListener('click', function() {
+                updatePreviewAndFile(currentInputId, currentPreviewId, originalFile);
+                cropModal.classList.add('hidden');
+                if (cropper) {
+                    cropper.destroy();
+                    cropper = null;
+                }
             });
 
             // Form submission
@@ -335,6 +484,14 @@
                     form.reset();
                     villageSelect.disabled = true;
                     villageSelect.innerHTML = '<option value="">First select your clan</option>';
+                    fileInputs.forEach(({ previewId }) => {
+                        document.getElementById(previewId).classList.add('hidden');
+                    });
+                    if (cropper) {
+                        cropper.destroy();
+                        cropper = null;
+                    }
+                    cropModal.classList.add('hidden');
                     
                     // Reset button
                     submitBtn.disabled = false;

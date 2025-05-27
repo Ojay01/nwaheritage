@@ -31,15 +31,15 @@
             <!-- Clan Navigation -->
             <div class="flex flex-wrap justify-center gap-4 mb-16">
                 <button onclick="scrollToSection('yamba')"
-                    class="bg-gradient-to-r from-teal-600 to-green-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-green-700 hover:to-green-800 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    class="bg-gradient-to-r from-teal-600 to-green-700 text-white px-4 py-2 md:px-8 md:py-4 rounded-xl font-semibold hover:from-green-700 hover:to-green-800 transform hover:scale-105 transition-all duration-300 shadow-lg">
                     <i class="fas fa-crown mr-2"></i>Yamba Clan
                 </button>
                 <button onclick="scrollToSection('mbaw')"
-                    class="bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:border-green-600 hover:text-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    class="bg-white text-gray-700 px-4 py-2 md:px-8 md:py-4 rounded-xl font-semibold border-2 border-gray-200 hover:border-green-600 hover:text-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
                     <i class="fas fa-seedling mr-2"></i>Mbaw Clan
                 </button>
                 <button onclick="scrollToSection('mfumte')"
-                    class="bg-white text-gray-700 px-8 py-4 rounded-xl font-semibold border-2 border-gray-200 hover:border-green-600 hover:text-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
+                    class="bg-white text-gray-700 px-4 py-2 md:px-8 md:py-4 rounded-xl font-semibold border-2 border-gray-200 hover:border-green-600 hover:text-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg">
                     <i class="fas fa-mountain mr-2"></i>Mfumte Clan
                 </button>
             </div>

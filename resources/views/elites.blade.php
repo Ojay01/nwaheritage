@@ -122,7 +122,7 @@
 
                             <!-- Description -->
                             <div class="mb-6">
-                                <p class="text-slate-600 leading-relaxed text-center line-clamp-4 group-hover:text-slate-700 transition-colors duration-300">
+                                <p class="text-slate-600 leading-relaxed text-center  group-hover:text-slate-700 transition-colors duration-300">
                                     {{ $elite['description'] }}
                                 </p>
                             </div>

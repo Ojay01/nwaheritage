@@ -15,6 +15,9 @@ Route::get('join-masu', [FrontendController::class, 'joinUs'])->name('joinUs');
 Route::get('our-events', [FrontendController::class, 'events'])->name('events');
 Route::get('our-projects', [FrontendController::class, 'projects'])->name('projects');
 Route::get('our-history', [FrontendController::class, 'history'])->name('history');
+Route::get('our-touristic-sites', [FrontendController::class, 'tourism'])->name('tourism');
+Route::get('our-clans', [FrontendController::class, 'clans'])->name('clans');
+Route::get('our-clans/{clan}', [FrontendController::class, 'showClans'])->name('clans.show');
 
 Route::middleware([
     'auth:sanctum',

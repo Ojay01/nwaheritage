@@ -2,15 +2,14 @@
 
         <x-frontend.hero   :primary-button="[
         'text' => 'Explore Clans',
-        'url' => '#',
+        'url' => route('clans'),
         'icon' => 'fas fa-compass'
     ]"
     :secondary-button="[
         'text' => 'Discover Sites',
-        'url' => '#',
+        'url' => route('tourism'),
         'icon' => 'fas fa-map-marker-alt'
     ]" />
-
 
         <x-frontend.clans />
 

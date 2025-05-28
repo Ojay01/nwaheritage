@@ -15,11 +15,11 @@
         <div class="hidden md:flex items-center space-x-6">
             <a href="/"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Home</a>
-            <a href="#clans"
+            <a href="{{route('clans')}}"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Clans</a>
             <a href="{{route('history')}}"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">History</a>
-            <a href="#tourism"
+            <a href="{{route('tourism')}}"
                 class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Tourism</a>
 
             <a href="/elites"
@@ -79,7 +79,7 @@
                     <span>Home</span>
                 </a>
 
-                <a href="#clans"
+                <a href="{{route('clans')}}"
                     class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
                     <i class="fas fa-flag w-5"></i>
                     <span>Clans</span>
@@ -91,7 +91,7 @@
                     <span>History</span>
                 </a>
 
-                <a href="#tourism"
+                <a href="{{route('tourism')}}"
                     class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
                     <i class="fas fa-map-marker-alt w-5"></i>
                     <span>Tourism</span>

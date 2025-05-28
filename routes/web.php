@@ -17,6 +17,7 @@ Route::get('our-projects', [FrontendController::class, 'projects'])->name('proje
 Route::get('our-history', [FrontendController::class, 'history'])->name('history');
 Route::get('our-touristic-sites', [FrontendController::class, 'tourism'])->name('tourism');
 Route::get('our-clans', [FrontendController::class, 'clans'])->name('clans');
+Route::get('our-elites', [FrontendController::class, 'elites'])->name('elites');
 Route::get('our-clans/{clan}', [FrontendController::class, 'showClans'])->name('clans.show');
 
 Route::middleware([

@@ -44,6 +44,10 @@ class FrontendController extends Controller
     {
         return view('clans.index');
     }
+        public function elites()
+    {
+        return view('elites');
+    }
 
     public function showClans($clan)
     {

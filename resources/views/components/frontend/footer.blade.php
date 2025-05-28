@@ -39,11 +39,22 @@
                 <div class="min-w-[150px]">
                     <h4 class="text-xl font-bold mb-6">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="{{route('projects')}}" class="text-gray-400 hover:text-white transition">Projects</a></li>
-                        <li><a href="#clans" class="text-gray-400 hover:text-white transition">Clans</a></li>
+                        <li>
+                            <a href="{{ route('projects') }}"
+                                class="{{ request()->routeIs('projects') ? 'text-white' : 'text-gray-400' }} hover:text-white transition">
+                                Projects
+                            </a>
+                        </li>
+                        <li><a href="{{route('clans')}}"
+                                class="{{ request()->routeIs('clans') ? 'text-white' : 'text-gray-400' }} hover:text-white transition">Clans</a>
+                        </li>
                         <li><a href="#" class="text-gray-400 hover:text-white transition">Our Team</a></li>
-                        <li><a href="{{route('events')}}" class="text-gray-400 hover:text-white transition">Events</a></li>
-                        <li><a href="{{route('education')}}" class="text-gray-400 hover:text-white transition">Education</a></li>
+                        <li><a href="{{route('events')}}"
+                                class="{{ request()->routeIs('events') ? 'text-white' : 'text-gray-400' }} hover:text-white transition">Events</a>
+                        </li>
+                        <li><a href="{{route('education')}}"
+                                class="{{ request()->routeIs('education') ? 'text-white' : 'text-gray-400' }} hover:text-white transition">Education</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -51,14 +62,27 @@
                 <div class="min-w-[150px]">
                     <h4 class="text-xl font-bold mb-6">Clan Pages</h4>
                     <ul class="space-y-3">
-                        <li><a href="/clans/yamba" class="text-gray-400 hover:text-white transition">Yamba Clan</a></li>
-                        <li><a href="/clans/mbaw" class="text-gray-400 hover:text-white transition">Mbaw Clan</a></li>
-                        <li><a href="/clans/mfumte" class="text-gray-400 hover:text-white transition">Mfumte Clan</a>
+                        <li>
+                            <a href="{{ route('clans.show', ['clan' => 'yamba']) }}"
+                                class="{{ request()->fullUrlIs(route('clans.show', ['clan' => 'yamba'])) ? 'text-white' : 'text-gray-400' }} hover:text-white transition">
+                                Yamba Clan
+                            </a>
                         </li>
-                        <li><a href="/festivals" class="text-gray-400 hover:text-white transition">Cultural
+                        <li>
+                            <a href="{{ route('clans.show', ['clan' => 'mbaw']) }}"
+                                class="{{ request()->fullUrlIs(route('clans.show', ['clan' => 'mbaw'])) ? 'text-white' : 'text-gray-400' }} hover:text-white transition">
+                                Mbaw Clan
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('clans.show', ['clan' => 'mfumte']) }}"
+                                class="{{ request()->fullUrlIs(route('clans.show', ['clan' => 'mfumte'])) ? 'text-white' : 'text-gray-400' }} hover:text-white transition">
+                                Mfumte Clan
+                            </a>
+                        </li>
+
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cultural
                                 Festivals</a></li>
-                        <li><a href="/governance" class="text-gray-400 hover:text-white transition">Traditional
-                                Governance</a></li>
                     </ul>
                 </div>
             </div>
@@ -90,8 +114,14 @@
         <div class="flex flex-col md:flex-row justify-between items-center">
             <p class="text-gray-400 mb-4 md:mb-0">&copy; <?php echo date('Y'); ?> MASU. All rights reserved.</p>
             <div class="flex space-x-6">
-                <a href="{{route('policy.show')}}" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
-                <a href="{{route('terms.show')}}" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                <a href="{{ route('policy.show') }}"
+                    class="{{ request()->routeIs('policy.show') ? 'text-white' : 'text-gray-400' }} hover:text-white transition">
+                    Privacy Policy
+                </a>
+                <a href="{{ route('terms.show') }}"
+                    class="{{ request()->routeIs('terms.show') ? 'text-white' : 'text-gray-400' }} hover:text-white transition">
+                    Terms of Service
+                </a>
                 <a href="#" class="text-gray-400 hover:text-white transition">Sitemap</a>
             </div>
         </div>

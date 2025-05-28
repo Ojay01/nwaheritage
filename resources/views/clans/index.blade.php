@@ -36,21 +36,21 @@
                         'image' => '/images/village.jpg',
                         'description' => 'The Yamba clan, with 15 villages, is the administrative and cultural hub of Nwa Sub-Division. Governed by Fons, it boasts health facilities, security infrastructure, and iconic touristic sites like Kopdze Cave and Mapong Dam. Its prominent elites and artists drive cultural preservation and development.',
                         'icon' => 'fas fa-landmark',
-                        'link' => '/our-clans/yamba'
+                        'link' => route('clans.show', ['clan' => 'yamba'])
                     ],
                     [
                         'name' => 'Mbaw',
-                        'image' => '/images/village.jpg', // No image, use placeholder
+                        'image' => '/images/village.jpg', 
                         'description' => 'The Mbaw clan, rooted in Tikar migrations, thrives on the fertile Mbaw Plain with 14 villages. Known for agriculture (rice, corn, palm) and the vibrant Sabongari markets, it faces farmer-grazer conflicts but is supported by education and economic growth.',
                         'icon' => 'fas fa-leaf',
-                        'link' => '/our-clans/mbaw'
+                        'link' => route('clans.show', ['clan' => 'mbaw'])
                     ],
                     [
                         'name' => 'Mfumte',
                         'image' => '/images/village.jpg',
                         'description' => 'The Mfumte clan, with 13 villages near the Cameroon-Nigeria border, is renowned for hospitality and growth. Governed by Fons and supported by MFUCUDA, it offers touristic potential with hilly terrain and historic caves, enhanced by trade and cultural exchange.',
                         'icon' => 'fas fa-mountain',
-                        'link' => '/our-clans/mfumte'
+                        'link' => route('clans.show', ['clan' => 'mfumte'])
                     ]
                 ];
             @endphp

@@ -14,24 +14,29 @@
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-6">
             <a href="/"
-                class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Home</a>
-            <a href="{{route('clans')}}"
-                class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Clans</a>
-            <a href="{{route('history')}}"
-                class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">History</a>
-            <a href="{{route('tourism')}}"
-                class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Tourism</a>
+                class="{{ request()->is('/') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Home</a>
 
-            <a href="/elites"
-                class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Elites</a>
-            <a href="{{route('about')}}"
-                class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">About</a>
-            <a href="{{route('joinUs')}}"
-                class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Join
+            <a href="{{ route('clans') }}"
+                class="{{ request()->routeIs('clans') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Clans</a>
+
+            <a href="{{ route('history') }}"
+                class="{{ request()->routeIs('history') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">History</a>
+
+            <a href="{{ route('tourism') }}"
+                class="{{ request()->routeIs('tourism') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Tourism</a>
+
+            <a href="{{ route('elites') }}"
+                class="{{ request()->routeIs('elites') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Elites</a>
+
+            <a href="{{ route('about') }}"
+                class="{{ request()->routeIs('about') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">About</a>
+
+            <a href="{{ route('joinUs') }}"
+                class="{{ request()->routeIs('joinUs') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Join
                 Us</a>
 
-            <a href="{{route('contact')}}"
-                class="text-white hover:text-green-300 transition duration-300 px-3 py-2 rounded-md hover:bg-white hover:bg-opacity-10">Contact</a>
+            <a href="{{ route('contact') }}"
+                class="{{ request()->routeIs('contact') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Contact</a>
 
             <!-- Our Community Button -->
             <a href="/community"
@@ -74,49 +79,50 @@
         <div class="flex-1 overflow-y-auto p-6">
             <div class="space-y-4">
                 <a href="/"
-                    class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
+                    class="flex items-center space-x-3  {{ request()->is('/') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 py-3 px-4 rounded-lg ">
                     <i class="fas fa-home w-5"></i>
                     <span>Home</span>
                 </a>
 
-                <a href="{{route('clans')}}"
-                    class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
+                <a href="{{ route('clans') }}"
+                    class="flex items-center space-x-3 {{ request()->routeIs('clans') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 py-3 px-4 rounded-lg">
                     <i class="fas fa-flag w-5"></i>
                     <span>Clans</span>
                 </a>
 
+
                 <a href="{{route('history')}}"
-                    class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
+                    class="flex items-center space-x-3  {{ request()->routeIs('history') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 py-3 px-4 rounded-lg ">
                     <i class="fas fa-book w-5"></i>
                     <span>History</span>
                 </a>
 
                 <a href="{{route('tourism')}}"
-                    class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
+                    class="flex items-center space-x-3  {{ request()->routeIs('tourism') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 py-3 px-4 rounded-lg ">
                     <i class="fas fa-map-marker-alt w-5"></i>
                     <span>Tourism</span>
                 </a>
 
-                <a href="/elites"
-                    class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
+                <a href="{{route('elites')}}"
+                    class="flex items-center space-x-3 {{ request()->routeIs('elites') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }}  transition duration-300 py-3 px-4 rounded-lg ">
                     <i class="fas fa-crown w-5"></i>
                     <span>Elites</span>
                 </a>
 
                 <a href="{{route('about')}}"
-                    class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
+                    class="flex items-center space-x-3  {{ request()->routeIs('about') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 py-3 px-4 rounded-lg ">
                     <i class="fas fa-info-circle w-5"></i>
                     <span>About</span>
                 </a>
 
                 <a href="{{route('joinUs')}}"
-                    class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
+                    class="flex items-center space-x-3  {{ request()->routeIs('joinUs') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 py-3 px-4 rounded-lg ">
                     <i class="fas fa-user-plus w-5"></i>
                     <span>Join Us</span>
                 </a>
 
                 <a href="{{route('contact')}}"
-                    class="flex items-center space-x-3 text-white hover:text-green-300 transition duration-300 py-3 px-4 rounded-lg hover:bg-white hover:bg-opacity-10">
+                    class="flex items-center space-x-3  {{ request()->routeIs('contact') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 py-3 px-4 rounded-lg ">
                     <i class="fas fa-envelope w-5"></i>
                     <span>Contact</span>
                 </a>

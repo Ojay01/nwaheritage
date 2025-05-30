@@ -17,7 +17,7 @@
                 class="{{ request()->is('/') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Home</a>
 
             <a href="{{ route('clans') }}"
-                class="{{ request()->routeIs('clans') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Clans</a>
+                class="{{ request()->routeIs(['clans', 'clans.*']) ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Clans</a>
 
             <a href="{{ route('history') }}"
                 class="{{ request()->routeIs('history') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">History</a>
@@ -39,7 +39,7 @@
                 class="{{ request()->routeIs('contact') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Contact</a>
 
             <!-- Our Community Button -->
-            <a href="/community"
+            <a href="{{route('community')}}"
                 class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition duration-300 flex items-center space-x-2 shadow-lg hover:shadow-xl">
                 <i class="fas fa-heart"></i>
                 <span>Our Community</span>
@@ -85,7 +85,7 @@
                 </a>
 
                 <a href="{{ route('clans') }}"
-                    class="flex items-center space-x-3 {{ request()->routeIs('clans') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 py-3 px-4 rounded-lg">
+                    class="flex items-center space-x-3 {{ request()->routeIs(['clans', 'clans.*']) ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 py-3 px-4 rounded-lg">
                     <i class="fas fa-flag w-5"></i>
                     <span>Clans</span>
                 </a>
@@ -131,7 +131,7 @@
 
         <!-- Sidebar Footer -->
         <div class="p-6 border-t border-green-800 border-opacity-30">
-            <a href="/community"
+            <a href="{{route('community')}}"
                 class="w-full flex items-center justify-center space-x-2 bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-lg transition duration-300 shadow-lg">
                 <i class="fas fa-heart"></i>
                 <span>Our Community</span>

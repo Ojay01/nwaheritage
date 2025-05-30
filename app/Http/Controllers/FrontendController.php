@@ -20,6 +20,10 @@ class FrontendController extends Controller
     {
         return view('education');
     }
+        public function community()
+    {
+        return view('community');
+    }
         public function joinUs()
     {
         return view('join-us');

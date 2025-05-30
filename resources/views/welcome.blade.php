@@ -41,7 +41,7 @@
                             <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Yamba</span>
                         </div>
                         <p class="text-gray-600 mb-4">A historic cave located in Nwa with significant cultural importance to the Yamba people.</p>
-                        <a href="/tourism/kopdze-cave" class="text-green-500 hover:text-green-600 font-medium flex items-center">
+                        <a href="{{route('tourism')}}" class="text-green-500 hover:text-green-600 font-medium flex items-center">
                             View details <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -144,7 +144,7 @@
             </div>
             
             <div class="mt-12 text-center">
-                <a href="/tourism" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg transition font-medium inline-flex items-center">
+                <a href="{{route('tourism')}}" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg transition font-medium inline-flex items-center">
                     <i class="fas fa-map-marked-alt mr-2"></i> View All Attractions
                 </a>
             </div>

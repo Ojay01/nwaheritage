@@ -11,6 +11,7 @@ Route::get('/', function () {
 Route::get('contact-us', [FrontendController::class, 'contact'])->name('contact');
 Route::get('about-us', [FrontendController::class, 'about'])->name('about');
 Route::get('education', [FrontendController::class, 'education'])->name('education');
+Route::get('our-community', [FrontendController::class, 'community'])->name('community');
 Route::get('join-masu', [FrontendController::class, 'joinUs'])->name('joinUs');
 Route::get('our-events', [FrontendController::class, 'events'])->name('events');
 Route::get('our-projects', [FrontendController::class, 'projects'])->name('projects');

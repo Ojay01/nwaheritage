@@ -10,7 +10,7 @@
             'image' => 'https://cdn.pixabay.com/photo/2017/01/19/23/46/panorama-1993645_1280.jpg',
             'tags' => ['Administrative Hub', 'Healthcare', 'Tourism'],
             'color' => 'yellow',
-            'link' => '#'
+            'link' => route('clans.show', ['clan' => 'yamba'])
         ],
         [
             'name' => 'Mbaw Clan',
@@ -19,7 +19,7 @@
             'image' => 'https://cdn.pixabay.com/photo/2017/01/19/23/46/panorama-1993645_1280.jpg',
             'tags' => ['Agricultural Hub', 'Markets', 'Education'],
             'color' => 'green',
-            'link' => '#'
+            'link' => route('clans.show', ['clan' => 'mbaw'])
         ],
         [
             'name' => 'Mfumte Clan',
@@ -28,7 +28,7 @@
             'image' => 'https://cdn.pixabay.com/photo/2017/01/19/23/46/panorama-1993645_1280.jpg',
             'tags' => ['Border Trade', 'Security', 'Development'],
             'color' => 'blue',
-            'link' => '#'
+            'link' => route('clans.show', ['clan' => 'mfumte'])
         ]
     ],
 

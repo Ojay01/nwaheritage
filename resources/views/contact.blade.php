@@ -116,7 +116,7 @@
                         <!-- reCAPTCHA -->
                         <div class="mb-6">
                             <div class="g-recaptcha" 
-                                 data-sitekey="6Lf86FMrAAAAAJAWYOpm-uE-4Op0xCJDCGq67bWc"
+                                 data-sitekey="6Lew7lMrAAAAAFZSB7pPOtakkku9Hm7Pkfbli41f"
                                  data-callback="onRecaptchaComplete"
                                  data-expired-callback="onRecaptchaExpired">
                             </div>
@@ -225,7 +225,7 @@
     </section>
 
     <!-- Scripts -->
-     <script src="https://www.google.com/recaptcha/api.js?render=6Lf86FMrAAAAAJAWYOpm-uE-4Op0xCJDCGq67bWc"></script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
         let recaptchaCompleted = false;
         

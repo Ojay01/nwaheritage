@@ -225,7 +225,7 @@
     </section>
 
     <!-- Scripts -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script src="https://www.google.com/recaptcha/api.js?render=6Lf86FMrAAAAAJAWYOpm-uE-4Op0xCJDCGq67bWc"></script>
     <script>
         let recaptchaCompleted = false;
         

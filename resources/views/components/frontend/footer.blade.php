@@ -122,7 +122,7 @@
                     class="{{ request()->routeIs('terms.show') ? 'text-white' : 'text-gray-400' }} hover:text-white transition">
                     Terms of Service
                 </a>
-                <a href="#" class="text-gray-400 hover:text-white transition">Sitemap</a>
+                <a href="/sitemap.xml" class="text-gray-400 hover:text-white transition">Sitemap</a>
             </div>
         </div>
     </div>

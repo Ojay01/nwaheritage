@@ -3,8 +3,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Dynamic Title -->
-    <title>{{ $title ?? 'MASU' }} | {{ $pageTitle ?? 'Home' }}</title>
+
+    <title>@yield('title', 'MASU') | @yield('pageTitle', 'Home')</title>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('masulogo.png') }}">
@@ -15,13 +15,14 @@
 
     <!-- SEO Meta -->
     <meta name="description"
-        content="{{ $metaDescription ?? 'Explore the cultural heritage of the Nwa Sub-Division and its vibrant clans.' }}">
+        content="@yield('description', 'Explore the cultural heritage of the Nwa Sub-Division and its vibrant clans.')">
+
     <meta name="author" content="Nwa Sub-Division">
 
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="{{ $title ?? 'Nwa Sub-Division Clans' }}">
+    <meta property="og:title" content="{{'Masu Online' }}">
     <meta property="og:description"
-        content="{{ $metaDescription ?? 'Explore the cultural heritage of the Nwa Sub-Division and its vibrant clans.' }}">
+        content="@yield('description', 'Explore the cultural heritage of the Nwa Sub-Division and its vibrant clans.')">
     <meta property="og:image" content="{{ asset('images/og-image.jpg') }}">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">

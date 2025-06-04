@@ -26,7 +26,7 @@
                 class="{{ request()->routeIs('tourism') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Tourism</a>
 
             <a href="{{ route('elites') }}"
-                class="{{ request()->routeIs('elites') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Elites</a>
+                class="{{ request()->routeIs('elites') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">Our Team</a>
 
             <a href="{{ route('about') }}"
                 class="{{ request()->routeIs('about') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }} transition duration-300 px-3 py-2 rounded-md">About</a>
@@ -106,7 +106,7 @@
                 <a href="{{route('elites')}}"
                     class="flex items-center space-x-3 {{ request()->routeIs('elites') ? 'text-green-300 bg-white bg-opacity-10' : 'text-white hover:text-green-300 hover:bg-white hover:bg-opacity-10' }}  transition duration-300 py-3 px-4 rounded-lg ">
                     <i class="fas fa-crown w-5"></i>
-                    <span>Elites</span>
+                    <span>Our Team</span>
                 </a>
 
                 <a href="{{route('about')}}"
